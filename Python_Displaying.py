@@ -11,6 +11,6 @@ print(list1 * 2)          # this will print the list two times
 print(list1 + list2)      # this will print the concatenated list
 
 
-print("Elements of the list, List1 are:");
+print("Elements of the list, List1 are:")
 for ml in list1+list2:
-    print(ml);
+    print(ml)
