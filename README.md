@@ -7,4 +7,4 @@
 2. [Bubble Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/BUBBLE.SORT.py)
 3. [Insertion Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/INSERTION.SORT.py)
 4. [Merge Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/Merge_SORT.py)
- 
+5. [Selection Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/Selection.Sort.py) 
