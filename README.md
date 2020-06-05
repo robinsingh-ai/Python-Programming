@@ -28,6 +28,10 @@
    - [Tower Of Hanoi](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Recursion/Tower_of_hanoi.py)
    - [Binary Search(Recursive)](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Recursion/Binary_Search_Recursive.py)
    
+- Searching
+   - [Linear Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Linear_search.py)
+   - [Interpolation Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Interpolation_Search.py)
+   
 - Sorting Algorithms
    - [Quick Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/Quick_Sort.py)
    - [Bubble Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/BUBBLE.SORT.py)
