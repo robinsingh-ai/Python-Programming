@@ -22,6 +22,12 @@
    - [Stack Usingh Linked list](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Linked%20List/Stack%20Using%20Linked%20List.py)
    - [Queue Using Linked list](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Linked%20List/Queue%20Using%20Linked%20List.py)
    
+- Recursion
+   - [Fibonacci](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Recursion/Fibonacci.py) 
+   - [Factorial](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Recursion/Factorial.py)
+   - [Tower Of Hanoi](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Recursion/Tower_of_hanoi.py)
+   - [Binary Search(Recursive)](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Recursion/Binary_Search_Recursive.py)
+   
 - Sorting Algorithms
    - [Quick Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/Quick_Sort.py)
    - [Bubble Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/BUBBLE.SORT.py)
