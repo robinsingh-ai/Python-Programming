@@ -30,6 +30,7 @@
    
 - Searching
    - [Linear Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Linear_search.py)
+   - [Jump Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Jump_search.py)
    - [Interpolation Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Interpolation_Search.py)
    
 - Sorting Algorithms
