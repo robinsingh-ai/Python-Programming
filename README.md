@@ -29,7 +29,9 @@
    - [Binary Search(Recursive)](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Recursion/Binary_Search_Recursive.py)
    
 - Searching
+   - [Binary Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Binary_Search.py)
    - [Linear Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Linear_search.py)
+   - [Fibonaaci Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Fibonaaci%20Search.py)
    - [Jump Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Jump_search.py)
    - [Interpolation Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Searching/Interpolation_Search.py)
    
