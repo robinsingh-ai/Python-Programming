@@ -44,3 +44,5 @@
    - [Heap Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/Heap.Sort.py)
    - [Shell Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/ShellSort.py)
    - [Counting Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Sorting%20Algorithms/Counting_Sort.py)
+ - Trees
+   - [Binary Search Tree](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Trees/Binary%20Search%20Tree.py)
