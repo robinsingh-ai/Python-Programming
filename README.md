@@ -47,3 +47,5 @@
  - Trees
    - [Binary Search Tree](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Trees/Binary%20Search%20Tree.py)
    - [Predecessor And Successor](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Trees/PREDECESSOR%20AND%20SUCCESSOR.py)
+ - Graph
+   - [Adjancey List](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/Adjancey_List.py)
