@@ -49,3 +49,8 @@
    - [Predecessor And Successor](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Trees/PREDECESSOR%20AND%20SUCCESSOR.py)
  - Graph
    - [Adjancey List](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/Adjancey_List.py)
+   - [Adjancey Matrix](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/Adjancey_matrix.py)
+   - [Breadth First Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/BFS.py)
+   
+ - Python Game Development
+   - [Snake Game](https://github.com/robin025/Snake-Game)
