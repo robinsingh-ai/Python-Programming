@@ -53,6 +53,10 @@
    - [Breadth First Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/BFS.py)
    - [Depth First Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/DFS.py)
    - [Topological Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/Topological_sort_graph.py)
+
+# Algorithms
+  - Divide And Conquer
+    - [Min Max ](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Divide%20_And%20_Conquer/Min_max_D%26C.py)
    
  - Python Game Development
    - [Snake Game](https://github.com/robin025/Snake-Game)
