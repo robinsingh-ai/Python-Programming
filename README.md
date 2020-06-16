@@ -51,6 +51,8 @@
    - [Adjancey List](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/Adjancey_List.py)
    - [Adjancey Matrix](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/Adjancey_matrix.py)
    - [Breadth First Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/BFS.py)
+   - [Depth First Search](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/DFS.py)
+   - [Topological Sort](https://github.com/robin025/Python-Programming/blob/master/Data%20Structures/Graphs/Topological_sort_graph.py)
    
  - Python Game Development
    - [Snake Game](https://github.com/robin025/Snake-Game)
