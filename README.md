@@ -57,6 +57,15 @@
 # Algorithms
   - Divide And Conquer
     - [Min Max ](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Divide%20_And%20_Conquer/Min_max_D%26C.py)
+    
+  - Greedy Algorithms
+    - [Activity Selection Problem](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Activity_Selection_problem.py)
+    - [Egyptian Fraction](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Egyptian_Fraction.py)
+    - [Kruskals Algorithm](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Kruskals_Algo.py)
+    - [Prims Algorithm](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Prims_Algorithms.py)
+    - [Dijkstra's Algorithm](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Dijkstra's_Algorithm.py)
+    - [Fractional Knapsack](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Fractional_Knapsack.py)
+    
    
  - Python Game Development
    - [Snake Game](https://github.com/robin025/Snake-Game)
