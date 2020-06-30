@@ -57,6 +57,9 @@
 # Algorithms
   - Divide And Conquer
     - [Min Max ](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Divide%20_And%20_Conquer/Min_max_D%26C.py)
+    - [Binary Search](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Divide%20_And%20_Conquer/Binary_Search.py)
+    - [Quick Sort](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Divide%20_And%20_Conquer/Quick_Sort_D%26C.py)
+    - [Merge Sort](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Divide%20_And%20_Conquer/Merge_sort_D%26C.py)
     
   - Greedy Algorithms
     - [Activity Selection Problem](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Activity_Selection_problem.py)
@@ -65,6 +68,16 @@
     - [Prims Algorithm](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Prims_Algorithms.py)
     - [Dijkstra's Algorithm](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Dijkstra's_Algorithm.py)
     - [Fractional Knapsack](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Fractional_Knapsack.py)
+    - [Huffman Coding](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Huffman_coding.py)
+    - [Minimum Coin Exchange Problem](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Greedy%20Algorithms/Minimum_no_Coins.py)
+  
+  - Dynamic Programming
+    - [Coin Change Prob1](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Dynamic%20Programmming/Coin_Change.py)
+    - [Coin Change Prob2](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Dynamic%20Programmming/Coin_change_prob02.py)
+    - [Bellman Ford Algorithm](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Dynamic%20Programmming/Bellman_Ford_Algorithm.py)
+    - [Floyd Warshall's Algorithm](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Dynamic%20Programmming/Floyd_Warshall.py)
+    - [LCS(Dynamic Approch)](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Dynamic%20Programmming/LCS.py)
+    - [Subset Sum ](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Dynamic%20Programmming/Subset_Sum.py)
     
    
  - Python Game Development
