@@ -79,6 +79,11 @@
     - [LCS(Dynamic Approch)](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Dynamic%20Programmming/LCS.py)
     - [Subset Sum ](https://github.com/robin025/Python-Programming/blob/master/Algorithms/Dynamic%20Programmming/Subset_Sum.py)
     
+  - Back-Tracking
+    - [Subset Sum](https://github.com/robin025/Python-Programming/blob/master/Algorithms/BackTracking/Subset_Sum.py)
+    - [N-Queen Problem](https://github.com/robin025/Python-Programming/blob/master/Algorithms/BackTracking/N_queens_problem.py)
+    - [Graph Coloring Problem](https://github.com/robin025/Python-Programming/blob/master/Algorithms/BackTracking/graph_coloring.py)
+    
    
- - Python Game Development
+# Python Game Development
    - [Snake Game](https://github.com/robin025/Snake-Game)
