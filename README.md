@@ -84,6 +84,11 @@
     - [N-Queen Problem](https://github.com/robin025/Python-Programming/blob/master/Algorithms/BackTracking/N_queens_problem.py)
     - [Graph Coloring Problem](https://github.com/robin025/Python-Programming/blob/master/Algorithms/BackTracking/graph_coloring.py)
     
+  - String Matching Algorithms
+    - [Naive Method](https://github.com/robin025/Python-Programming/blob/master/Algorithms/String%20Matching%20Algorithm/Naive_method.py)
+    - [Knuth–Morris–Pratt Method](https://github.com/robin025/Python-Programming/blob/master/Algorithms/String%20Matching%20Algorithm/KMP_Method.py)
+    - [Rabin Karp Method](https://github.com/robin025/Python-Programming/blob/master/Algorithms/String%20Matching%20Algorithm/Rabin_Karp.py)
+    
    
 # Python Game Development
    - [Snake Game](https://github.com/robin025/Snake-Game)
