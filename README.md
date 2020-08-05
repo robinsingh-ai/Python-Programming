@@ -94,3 +94,6 @@
    - [Snake Game](https://github.com/robin025/Snake-Game)
    - [Flappy Bird Game](https://github.com/robin025/Flappy-Bird-Game)
    
+# Python GUI Projects
+ - [Music Player](https://github.com/robin025/Music-Player)
+   
