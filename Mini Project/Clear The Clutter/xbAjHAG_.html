@@ -1,0 +1,695 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"4bd385b2a5",applicationID:"191019794"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4bd385b2a5","applicationID":"191019794","transactionName":"NVRSbRRYWkRQVkxaWAwedkwIWkBeXlsXRFYFRVFQChdXWENQFkVeB0ZDAxVcRkFU","queueTime":0,"applicationTime":195,"agent":""}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="icon" type="image/png" href="https://d3fvh0lm0eshry.cloudfront.net/static/favicon.png">
+  <link rel="shortcut icon" href="https://d3fvh0lm0eshry.cloudfront.net/static/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://d3fvh0lm0eshry.cloudfront.net/static/favicon.ico" type="image/x-icon">
+  <meta property="og:site_name" content="New America" />
+
+  <link rel="canonical" href="http://newamerica.org/weekly/hello-hello-world/" />
+  <meta property="og:url" content="http://newamerica.org/weekly/hello-hello-world/">
+  <meta name="twitter:url" content="http://newamerica.org/weekly/hello-hello-world/">
+
+  <title>Hello, “Hello, World”</title>
+  <meta property="og:title" content="Hello, “Hello, World”" />
+  <meta name="twitter:title" content="Hello, “Hello, World”" />
+
+  <meta name="description" content="The first code any programmer learns also says a lot about the craft." />
+  <meta property="og:description" content="The first code any programmer learns also says a lot about the craft." />
+  <meta name="twitter:description" content="The first code any programmer learns also says a lot about the craft." />
+
+  
+    
+    <meta property="og:image" content="https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_1375463840.2e16d0ba.fill-1200x630.jpg" />
+    <meta name="twitter:image" content="https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_1375463840.2e16d0ba.fill-1200x630.jpg" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@NewAmerica">
+  
+
+  
+    <link href="/static/css/newamericadotorg-a1a21cf5a59b6570c803.css" rel="stylesheet">
+    
+
+  <script>
+    window.user = {};
+    
+    
+    window.meta = {"programs": [{"id": 14, "name": "Better Life Lab", "title": "Better Life Lab", "description": "The Better Life Lab works in solidarity with the movement for work-life justice to transform culture. We provide original research and reporting. We translate that into accessible stories, practical tools and policy and workplace interventions, and we creatively amplify them to the widest possible audiences.", "url": "/better-life-lab/", "logo": "", "slug": "better-life-lab", "subprograms": [{"id": 24233, "name": "Better Life Lab Experiments", "url": "/better-life-lab/better-life-lab-experiments/", "title": "Better Life Lab Experiments", "slug": "better-life-lab-experiments", "type": "Initiative"}], "subscriptions": [{"id": 20234, "title": "Better Life Lab Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Better Life Lab Newsletters & Events"}, {"id": 24165, "title": "Better Life Lab - Experiments", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Better Life Lab - Experiments"}]}, {"id": 7480, "name": "Digital Impact and Governance Initiative", "title": "Digital Impact and Governance Initiative", "description": "The Digital Governance and Impact Initiative (DIGI) develops technology platforms that transform the way institutions deliver value for citizens. We work with partners in government and the private sector to create modular, interoperable technology solutions built on open source code that address key challenges facing the public sector.", "url": "/digital-impact-governance-inititiative/", "logo": "", "slug": "digital-impact-governance-inititiative", "subprograms": [{"id": 12029, "name": "Blockchain Trust Accelerator", "url": "/digital-impact-governance-inititiative/blockchain-trust-accelerator/", "title": "Blockchain Trust Accelerator", "slug": "blockchain-trust-accelerator", "type": "Initiative"}, {"id": 24907, "name": "Digital Impact and Governance Initiative Platforms", "url": "/digital-impact-governance-inititiative/digital-impact-and-governance-initiative-platforms/", "title": "Digital Impact and Governance Initiative Platforms", "slug": "digital-impact-and-governance-initiative-platforms", "type": "Initiative"}], "subscriptions": [{"id": 20236, "title": "Bretton Woods II Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Bretton Woods II Newsletters & Events", "alternate_title": "Digital Impact and Governance Initiative Newsletters & Events"}, {"id": 20721, "title": "Bretton Woods II - Blockchain Trust Accelerator", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Bretton Woods II - Blockchain Trust Accelerator", "alternate_title": "Digital Impact and Governance Initiative - Blockchain Trust Accelerator"}]}, {"id": 39, "name": "Cybersecurity Initiative", "title": "Cybersecurity Initiative", "description": "The goal of New America\u2019s Cybersecurity Initiative is to bring the key attributes of New America\u2019s ethos to the cybersecurity policy conversation. In doing so, the Initiative provides a look at issues from fresh perspectives, an emphasis on cross-disciplinary collaboration, a commitment to quality research and events, and dedication to diversity in all its guises. The Initiative seeks to address issues others can\u2019t or don\u2019t and create impact at scale.", "url": "/cybersecurity-initiative/", "logo": "", "slug": "cybersecurity-initiative", "subprograms": [{"id": 17579, "name": "FIU-New America C2B Partnership", "url": "/cybersecurity-initiative/c2b/", "title": "FIU-New America C2B Partnership", "slug": "c2b", "type": "Initiative"}, {"id": 17581, "name": "Humans of Cybersecurity", "url": "/cybersecurity-initiative/humans-of-cybersecurity/", "title": "Humans of Cybersecurity", "slug": "humans-of-cybersecurity", "type": "Initiative"}, {"id": 18588, "name": "DigiChina", "url": "/cybersecurity-initiative/digichina/", "title": "DigiChina", "slug": "digichina", "type": "Initiative"}], "subscriptions": [{"id": 20240, "title": "Cybersecurity Initiative Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Cybersecurity Initiative Newsletters & Events"}, {"id": 20239, "title": "Cybersecurity - DigiChina Newsletters", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Cybersecurity - DigiChina Newsletters", "alternate_title": "DigiChina Newsletters"}, {"id": 20252, "title": "Humans of Cybersecurity", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Humans of Cybersecurity", "alternate_title": "Humans of Cybersecurity Newsletters"}]}, {"id": 59, "name": "Education Policy", "title": "Education Policy", "description": "We use original research and policy analysis to help solve the nation\u2019s critical education problems, crafting objective analyses and suggesting new ideas for policymakers, educators, and the public at large.", "url": "/education-policy/", "logo": "", "slug": "education-policy", "subprograms": [{"id": 131, "name": "Early & Elementary Education", "url": "/education-policy/early-elementary-education-policy/", "title": "Early & Elementary Education", "slug": "early-elementary-education-policy", "type": "Initiative"}, {"id": 7468, "name": "PreK-12 Education", "url": "/education-policy/prek-12-education/", "title": "PreK-12 Education", "slug": "prek-12-education", "type": "Initiative"}, {"id": 7469, "name": "Higher Education", "url": "/education-policy/higher-education/", "title": "Higher Education", "slug": "higher-education", "type": "Initiative"}, {"id": 7470, "name": "Center on Education & Skills", "url": "/education-policy/center-education-and-skills/", "title": "Center on Education & Skills", "slug": "center-education-and-skills", "type": "Initiative"}, {"id": 7471, "name": "English Learners", "url": "/education-policy/english-learners/", "title": "English Learners", "slug": "english-learners", "type": "Initiative"}, {"id": 7472, "name": "Teaching, Learning, and Tech", "url": "/education-policy/teaching-learning-tech/", "title": "Teaching, Learning, and Tech", "slug": "teaching-learning-tech", "type": "Initiative"}, {"id": 21702, "name": "Learning Sciences Exchange (LSX)", "url": "/education-policy/learning-sciences-exchange-lsx/", "title": "Learning Sciences Exchange (LSX)", "slug": "learning-sciences-exchange-lsx", "type": "Project"}, {"id": 21737, "name": "Partnership to Advance Youth Apprenticeship", "url": "/education-policy/partnership-advance-youth-apprenticeship/", "title": "Partnership to Advance Youth Apprenticeship", "slug": "partnership-advance-youth-apprenticeship", "type": "Project"}], "subscriptions": [{"id": 20244, "title": "Education Policy Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Education Policy Newsletters & Events", "alternate_title": "EdCentral - Education Policy Newsletters & Events"}, {"id": 20238, "title": "CESNA Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "CESNA Newsletters & Events", "alternate_title": "Center on Education & Skills Update"}, {"id": 20242, "title": "Education Policy - DLL National Workgroup", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Education Policy - DLL National Workgroup", "alternate_title": "English Learner Update"}, {"id": 20243, "title": "Education Policy - Early & Elementary Ed", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Education Policy - Early & Elementary Ed", "alternate_title": "Early and Elementary Education Update"}]}, {"id": 132, "name": "Fellows", "title": "Fellows", "description": "New America\u2019s Fellows Program invests in thinkers\u2014journalists, scholars, filmmakers, and public policy analysts\u2014who generate big, bold ideas that have an impact and spark new conversations about the most pressing issues of our day.", "url": "/fellows/", "logo": "", "slug": "fellows", "subprograms": [{"id": 20927, "name": "India-United States Fellows Exchange", "url": "/fellows/india-united-states-fellows-exchange/", "title": "India-United States Fellows Exchange", "slug": "india-united-states-fellows-exchange", "type": "Initiative"}], "subscriptions": [{"id": 20246, "title": "Fellows - Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Fellows - Newsletters & Events", "alternate_title": "Fellows Events & The Fifth Draft Newsletter"}, {"id": 24845, "title": "The Fifth Draft Newsletter", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "The Fifth Draft Newsletter", "alternate_title": "The Fifth Draft Newsletter"}, {"id": 24846, "title": "Call for Applications", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Call for Applications", "alternate_title": "Call for Applications"}]}, {"id": 69, "name": "Future Tense", "title": "Future Tense", "description": "Future Tense is a partnership between New America, Arizona State University, and Slate magazine to explore emerging technologies and their transformative effects on society and public policy. Central to the partnership is a series of events that take in-depth, provocative looks at issues that, while little-understood today, will dramatically reshape the policy debates of the coming decade.", "url": "/future-tense/", "logo": "", "slug": "future-tense", "subprograms": null, "subscriptions": [{"id": 20250, "title": "Future Tense - Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Future Tense - Newsletters & Events", "alternate_title": "Future Tense Newsletters & Events"}]}, {"id": 78, "name": "International Security", "title": "International Security", "description": "The International Security program aims to provide evidence-based analysis of some of the thorniest questions facing American policymakers and the public. We are focused on South Asia and the Middle East, extremist groups such as ISIS, al Qaeda and allied groups, the proliferation of drones, homeland security, and the activities of U.S. Special Forces and the CIA.", "url": "/international-security/", "logo": "", "slug": "international-security", "subprograms": [{"id": 142, "name": "Future of War", "url": "/international-security/future-war/", "title": "Future of War", "slug": "future-war", "type": "Initiative"}, {"id": 20147, "name": "Data Projects", "url": "/international-security/data/", "title": "Data Projects", "slug": "data", "type": "Project"}, {"id": 20148, "name": "Terrorism in America after 9/11", "url": "/in-depth/terrorism-in-america/", "title": "Terrorism in America after 9/11", "slug": "terrorism-america-after-911", "type": "Project"}, {"id": 22094, "name": "Future of Proxy Warfare", "url": "/international-security/future-proxy-warfare/", "title": "Future of Proxy Warfare", "slug": "future-proxy-warfare", "type": "Initiative"}], "subscriptions": [{"id": 20253, "title": "International Security - Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "International Security - Newsletters & Events", "alternate_title": "International Security Program Newsletters & Events"}]}, {"id": 87, "name": "Open Technology Institute", "title": "Open Technology Institute", "description": "OTI works at the intersection of technology and policy to ensure that every community has equitable access to digital technology and its benefits. We promote universal access to communications technologies that are both open and secure, using a multidisciplinary approach that brings together advocates, researchers, organizers, and innovators.", "url": "/oti/", "logo": "", "slug": "oti", "subprograms": [{"id": 124, "name": "Wireless Future Project", "url": "/oti/wireless-future-project/", "title": "Wireless Future Project", "slug": "wireless-future-project", "type": "Initiative"}, {"id": 135, "name": "Measurement Lab", "url": "/oti/measurement-lab/", "title": "Measurement Lab", "slug": "measurement-lab", "type": "Initiative"}, {"id": 136, "name": "Ranking Digital Rights", "url": "/oti/ranking-digital-rights/", "title": "Ranking Digital Rights", "slug": "ranking-digital-rights", "type": "Initiative"}, {"id": 17750, "name": "TechCongress", "url": "/oti/techcongress/", "title": "TechCongress", "slug": "techcongress", "type": "Initiative"}], "subscriptions": [{"id": 20261, "title": "OTI - Open Tech Talk", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "OTI - Open Tech Talk", "alternate_title": "Open Tech Talk"}, {"id": 20260, "title": "Open Technology Institute - Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Open Technology Institute - Newsletters & Events", "alternate_title": "OTI Newsletters & Events"}]}, {"id": 96, "name": "Political Reform", "title": "Political Reform", "description": "The Political Reform program works towards an open, fair democratic process, with equitable opportunities for full participation, in order to restore dynamism and growth to the American economy and society.", "url": "/political-reform/", "logo": "", "slug": "political-reform", "subprograms": [{"id": 7474, "name": "New Models of Policy Change", "url": "/political-reform/new-models-policy-change/", "title": "New Models of Policy Change", "slug": "new-models-policy-change", "type": "Initiative"}, {"id": 7475, "name": "Congressional Capacity Project", "url": "/political-reform/congressional-capacity-project/", "title": "Congressional Capacity Project", "slug": "congressional-capacity-project", "type": "Initiative"}, {"id": 13412, "name": "Participatory Democracy Project", "url": "/political-reform/participatory-democracy-project/", "title": "Participatory Democracy Project", "slug": "participatory-democracy-project", "type": "Initiative"}], "subscriptions": [{"id": 20262, "title": "Political Reform - Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Political Reform - Newsletters & Events", "alternate_title": "Political Reform Program Newsletters & Events"}]}, {"id": 5567, "name": "Resource Security", "title": "Resource Security", "description": "New America\u2019s Resource Security program looks at the intersection of security, prosperity, and natural resources.", "url": "/resource-security/", "logo": "", "slug": "resource-security", "subprograms": [{"id": 20223, "name": "Phase Zero Project: Shaping the Competitive Space", "url": "/resource-security/phase-zero-project/", "title": "Phase Zero Project: Shaping the Competitive Space", "slug": "phase-zero-project", "type": "Initiative"}, {"id": 7477, "name": "Weather Eye", "url": "/resource-security/weather-eye/", "title": "Weather Eye", "slug": "weather-eye", "type": "Initiative"}, {"id": 7478, "name": "Geopolitics of Natural Resources", "url": "/resource-security/geopolitics-natural-resources/", "title": "Geopolitics of Natural Resources", "slug": "geopolitics-natural-resources", "type": "Initiative"}, {"id": 26136, "name": "Foresight 2020: Climate Governance in America", "url": "/resource-security/foresight-2020-climate-governance-america/", "title": "Foresight 2020: Climate Governance in America", "slug": "foresight-2020-climate-governance-america", "type": "Project"}], "subscriptions": [{"id": 20265, "title": "Resource Security Newsletter & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Resource Security Newsletter & Events", "alternate_title": "Resource Security Monthly"}]}, {"id": 1616, "name": "New America NYC", "title": "New America NYC", "description": "New America NYC brings together big ideas, policy innovation, and lively public conversations in the unique setting of New York City. It works to curate, connect, catalyze, and communicate the new America that is emerging beyond the Beltway to connect government to ideas, ideas to action, and citizens to government.", "url": "/nyc/", "logo": "", "slug": "nyc", "subprograms": [{"id": 7518, "name": "Social Cinema @ New America", "url": "/nyc/social-cinema/", "title": "Social Cinema @ New America", "slug": "social-cinema", "type": "Initiative"}, {"id": 7522, "name": "U.S.-Iran Initiative", "url": "/nyc/us-iran-initiative/", "title": "U.S.-Iran Initiative", "slug": "us-iran-initiative", "type": "Initiative"}], "subscriptions": [{"id": 20258, "title": "New America NYC - Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "New America NYC - Newsletters & Events", "alternate_title": "New America NYC Newsletters & Events"}]}, {"id": 4006, "name": "New America CA", "title": "New America CA", "description": "New America CA promotes efforts that are locally grown and grounded in economic equity, in which technology, innovation and compelling storytelling yield transformative solutions for our most marginalized community members.", "url": "/ca/", "logo": "", "slug": "ca", "subprograms": [{"id": 7473, "name": "New America CA Fellowship", "url": "/ca/new-america-ca-fellowship/", "title": "New America CA Fellowship", "slug": "new-america-ca-fellowship", "type": "Initiative"}, {"id": 22010, "name": "California Public Engagement", "url": "/ca/california-public-engagement/", "title": "California Public Engagement", "slug": "california-public-engagement", "type": "Initiative"}], "subscriptions": [{"id": 20256, "title": "New America CA - Events & Newsletters", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "New America CA - Events & Newsletters", "alternate_title": "New America California Events & Newsletters"}]}, {"id": 13323, "name": "Public Interest Technology", "title": "Public Interest Technology", "description": "New America\u2019s Public Interest Technology team connects technologists to public interest organizations. We aim to improve services to vulnerable communities and strengthen local organizations that serve them.", "url": "/public-interest-technology/", "logo": "", "slug": "public-interest-technology", "subprograms": [{"id": 22790, "name": "Public Interest Technology University Network", "url": "/public-interest-technology/university-network/", "title": "Public Interest Technology University Network", "slug": "university-network", "type": "Initiative"}], "subscriptions": [{"id": 20263, "title": "Public Interest Technology - The Commons", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Public Interest Technology - The Commons", "alternate_title": "The Commons Newsletter"}, {"id": 22871, "title": "Public Interest Technology University Network Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Public Interest Technology University Network Newsletters & Events", "alternate_title": "PIT-UN Updates & Events Newsletter"}]}, {"id": 13668, "name": "New America Chicago", "title": "New America Chicago", "description": "New America Chicago is a nonpartisan policy innovation lab. We convene community leaders, thought leaders, and policymakers committed to finding practical solutions to community challenges, particularly those related to work, income, and inequity.", "url": "/chicago/", "logo": "", "slug": "chicago", "subprograms": null, "subscriptions": [{"id": 20257, "title": "New America Chicago Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "New America Chicago Newsletters & Events", "alternate_title": "New America Chicago Newsletters & Events"}]}, {"id": 17797, "name": "Millennials Initiative", "title": "Millennials Initiative", "description": "The Millennials Initiative at New America is examining the challenges facing this generation of young adults as they aspire to assemble the basic building blocks of success\u2014getting an education, finding a job, managing finances, buying a home, raising a family, and engaging socially and politically in a community.", "url": "/millennials/", "logo": "", "slug": "millennials", "subprograms": [{"id": 13107, "name": "Millennial Public Policy Fellowship", "url": "/millennials/millennial-public-policy-fellowship/", "title": "Millennial Public Policy Fellowship", "slug": "millennial-public-policy-fellowship", "type": "Initiative"}], "subscriptions": [{"id": 20254, "title": "Millennials Initiative Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Millennials Initiative Newsletters & Events"}]}, {"id": 18394, "name": "Muslim Diaspora Initiative", "title": "Muslim Diaspora Initiative", "description": "The Muslim Diaspora Initiative provides a fresh perspective on Muslim communities in the United States through a non-security lens. We research, analyze, write, convene, advise and conduct outreach on policy-relevant topics related to American Muslim communities.", "url": "/muslim-diaspora-initiative/", "logo": "", "slug": "muslim-diaspora-initiative", "subprograms": [{"id": 21966, "name": "Exploring Online Hate", "url": "/muslim-diaspora-initiative/exploring-online-hate/", "title": "Exploring Online Hate", "slug": "exploring-online-hate-project", "type": "Project"}], "subscriptions": null}, {"id": 19324, "name": "Work, Workers, and Technology", "title": "Work, Workers, and Technology", "description": "Today, work as we know it is shifting, and rapidly. Advanced technologies are changing the demand for skills, the nature of occupations, and what is required to earn a good living. Jobs are no longer so clearly defined. Workers cannot expect to stay in one job or industry for 40 years, while experience and seniority doesn\u2019t guarantee advancement. As a result, more people are proactively creating jobs for themselves, such as in creative fields or the gig economy. Automation and artificial intelligence drive some of these changes and will continue to profoundly change what it takes to earn a good living in the future -- a recent McKinsey study found that 45 percent of job activities could be automated with existing technology.", "url": "/work-workers-technology/", "logo": "", "slug": "work-workers-technology", "subprograms": null, "subscriptions": [{"id": 21327, "title": "Work, Workers, and Technology Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Work, Workers, and Technology Newsletters & Events"}]}, {"id": 19624, "name": "New America Local", "title": "New America Local", "description": "We believe that somewhere in America local innovators are figuring out and testing solutions to many of our most intractable public problems, but these solutions may not be shared, scaled, or visible to those who need them most. New America is working to change that.", "url": "/local/", "logo": "", "slug": "local", "subprograms": [{"id": 23555, "name": "Our Towns", "url": "/local/our-towns/", "title": "Our Towns", "slug": "our-towns", "type": "Initiative"}], "subscriptions": [{"id": 20722, "title": "RiseLocal Newsletters & Events", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "RiseLocal Newsletters & Events"}]}, {"id": 20047, "name": "New America Indianapolis", "title": "New America Indianapolis", "description": "New America is a team of public problem-solvers who help America seize the opportunities presented by social and technological change. New America Indianapolis brings this work to life in the Midwest, listening to and working with smaller cities and rural communities across the Rust Belt. We seek out and share powerful ideas, do research, hold thought-provoking events, and provide technical assistance to civic innovators (that means YOU). We focus on work, income, and equitable opportunity through a racial justice lens.", "url": "/indianapolis/", "logo": "", "slug": "indianapolis", "subprograms": [{"id": 26084, "name": "COVID-19 and the Black Community: Perspectives, Resources & Solutions", "url": "/indianapolis/covid-19-and-black-community/", "title": "COVID-19 and the Black Community: Perspectives, Resources & Solutions", "slug": "covid-19-and-black-community", "type": "Initiative"}, {"id": 26165, "name": "Public Problem-Solving Partnership", "url": "/indianapolis/httpswwwnewamericaorgindianapolisnew-america-indy-iupui-public-problem-solving-partnership/", "title": "Public Problem-Solving Partnership", "slug": "httpswwwnewamericaorgindianapolisnew-america-indy-iupui-public-problem-solving-partnership", "type": "Initiative"}], "subscriptions": null}, {"id": 21059, "name": "Future of Property Rights", "title": "Future of Property Rights", "description": "FPR aims to help solve today\u2019s property rights challenges by shrinking the gulf between technologists and policymakers. We also strive to preempt emerging land challenges by thinking critically about the paradigms that govern new spaces.", "url": "/future-property-rights/", "logo": "", "slug": "future-property-rights", "subprograms": [{"id": 25353, "name": "Property Loss in America Project", "url": "/future-property-rights/property-loss-america-project/", "title": "Property Loss in America Project", "slug": "property-loss-america-project", "type": "Project"}], "subscriptions": [{"id": 20248, "title": "Future of Property Rights Initiative", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "Future of Property Rights Initiative", "alternate_title": "Future of Property Rights Newsletters & Events"}]}, {"id": 22770, "name": "Responsible Asset Allocator Initiative", "title": "Responsible Asset Allocator Initiative", "description": "RAAI is focused on mobilizing capital from the world\u2019s largest institutions toward responsible investing and the achievement of the Sustainable Development Goals of the United Nations.", "url": "/responsible-asset-allocator-initiative/", "logo": "", "slug": "responsible-asset-allocator-initiative", "subprograms": null, "subscriptions": null}], "content_types": [{"name": "Press Release", "api_name": "pressrelease", "title": "Press Releases", "slug": "press-releases", "url": "/press-releases/"}, {"name": "Article/Op-Ed", "api_name": "article", "title": "Articles", "slug": "articles", "url": "/articles/"}, {"name": "Blog Post", "api_name": "blogpost", "title": "Blog Posts", "slug": "blogs", "url": "/blogs/"}, {"name": "Book", "api_name": "book", "title": "Books", "slug": "books", "url": "/books/"}, {"name": "In The News Piece", "api_name": "quoted", "title": "In The News", "slug": "in-the-news", "url": "/in-the-news/"}, {"name": "Podcast", "api_name": "podcast", "title": "Podcasts", "slug": "podcasts", "url": "/podcasts/"}, {"name": "Report", "api_name": "report", "title": "Reports", "slug": "reports", "url": "/reports/"}, {"name": "Weekly Article", "api_name": "weeklyarticle", "title": "Weekly Articles", "slug": "weekly-articles", "url": "/weekly-articles/"}], "about_pages": [{"title": "Our Story", "url": "/our-story/"}, {"title": "Our People", "url": "/our-people/"}, {"title": "Our Funding", "url": "/our-funding/"}, {"title": "Press Room", "url": "/press-room/"}, {"title": "Jobs & Fellowships", "url": "/jobs/"}, {"title": "New America Turns 20", "url": "/new-america-20/"}], "home_subscriptions": [{"id": 20255, "title": "New America - The Week Ahead", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "New America - The Week Ahead", "alternate_title": "The Week Ahead"}, {"id": 20259, "title": "New America Weekly", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "New America Weekly", "alternate_title": "New America Weekly"}, {"id": 25803, "title": "COVID19 Daily Brief List", "ListID": "ac0721427fe250c9bfe10f98fa7fe725", "SegmentID": "COVID19 Daily Brief List", "alternate_title": "COVID19 Daily Brief Newsletter"}]};
+    var newamericadotorg = null;
+  </script>
+  
+    <!-- Conditionally load polyfills -->
+    <script>
+      (function browserSupport() {
+        var modernBrowser = (
+          window.Promise &&
+          window.fetch &&
+          window.Symbol &&
+          window.URL &&
+          window.URLSearchParams
+        );
+        if (!modernBrowser) {
+          var scriptElement = document.createElement('script');
+          scriptElement.async = false;
+          scriptElement.src = "/static/js/polyfills-a1a21cf5a59b6570c803.js";
+          document.head.appendChild(scriptElement);
+        }
+      }())
+    </script>
+  
+  
+      
+  
+</head>
+
+<body class=" " id="na-post">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MMGT6BG');</script>
+  <!-- End Google Tag Manager -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMGT6BG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  
+  
+
+    
+      
+<!-- 86400 header  -->
+<header class="header scroll-target " data-scroll-offset="125">
+  <div class="header__wrapper ">
+    <div class="container">
+    <div class="row no-gutters">
+      <div class="header__logo-wrapper col-lg-2 col-11">
+        <a href="/">
+          <div class="header__logo logo"></div>
+        </a>
+      </div>
+      <nav class="header__nav col-md-10">
+        <!-- floated right, so this is in opposite order -->
+<div class="header__nav__search">
+  <div class="header__nav__search__input">
+    <div class="input">
+      <form action="/search/?query=value" method="get">
+        <input type="text" autocomplete="off" name="query" id="search-input" placeholder="Search" />
+      </form>
+    </div>
+  </div>
+  <div class="header__nav__search__icon">
+    <div class="search-icon">
+  <span class="glass"></span>
+  <span class="handle"></span>
+</div>
+
+  </div>
+</div>
+
+        <div class="header__nav__dropdowns-wrapper">
+  <div class="header__nav__dropdown">
+    <a class="header__nav__dropdown__header drop">
+      <h4 class="link inline"><span><u>Programs</u></span></h4>
+    </a>
+    <div class="header__nav__dropdown__list-wrapper programs-dropdown">
+      
+
+
+<div class="programs-dropdown-wrapper container">
+<div class="row">
+
+  <div class="col-3">
+    <h4 class="link column-heading margin-0"><a href="/local/"><u>New America Local &mdash;</u></a></h4>
+    <div class="header__nav__dropdown__list margin-top-25">
+      
+        
+          <div class="header__nav__dropdown__list__item">
+            <h6 class="link margin-0">
+              <a href="/ca/">
+                <u>New America CA</u>
+              </a>
+            </h6>
+          </div>
+        
+      
+        
+          <div class="header__nav__dropdown__list__item">
+            <h6 class="link margin-0">
+              <a href="/chicago/">
+                <u>New America Chicago</u>
+              </a>
+            </h6>
+          </div>
+        
+      
+        
+          <div class="header__nav__dropdown__list__item">
+            <h6 class="link margin-0">
+              <a href="/indianapolis/">
+                <u>New America Indianapolis</u>
+              </a>
+            </h6>
+          </div>
+        
+      
+        
+      
+        
+          <div class="header__nav__dropdown__list__item">
+            <h6 class="link margin-0">
+              <a href="/nyc/">
+                <u>New America NYC</u>
+              </a>
+            </h6>
+          </div>
+        
+      
+    </div>
+  </div>
+  <div class="col-9">
+    <h4 class="link column-heading margin-0">
+      <a href="/programs/"><u>Programs &mdash;</u></a>
+    </h4>
+    <div class="row margin-top-25">
+    
+      <div class="header__nav__dropdown__list col-4">
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/better-life-lab/">
+              <u>Better Life Lab</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/cybersecurity-initiative/">
+              <u>Cybersecurity Initiative</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/digital-impact-governance-inititiative/">
+              <u>Digital Impact and Governance Initiative</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/education-policy/">
+              <u>Education Policy</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/fellows/">
+              <u>Fellows</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/future-property-rights/">
+              <u>Future of Property Rights</u>
+            </a>
+          </h6>
+        </div>
+        
+      </div>
+    
+      <div class="header__nav__dropdown__list col-4">
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/future-tense/">
+              <u>Future Tense</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/international-security/">
+              <u>International Security</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/millennials/">
+              <u>Millennials Initiative</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/muslim-diaspora-initiative/">
+              <u>Muslim Diaspora Initiative</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/oti/">
+              <u>Open Technology Institute</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/political-reform/">
+              <u>Political Reform</u>
+            </a>
+          </h6>
+        </div>
+        
+      </div>
+    
+      <div class="header__nav__dropdown__list col-4">
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/public-interest-technology/">
+              <u>Public Interest Technology</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/resource-security/">
+              <u>Resource Security</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/responsible-asset-allocator-initiative/">
+              <u>Responsible Asset Allocator Initiative</u>
+            </a>
+          </h6>
+        </div>
+        
+        <div class="header__nav__dropdown__list__item">
+          <h6 class="link margin-0">
+            <a href="/work-workers-technology/">
+              <u>Work, Workers, and Technology</u>
+            </a>
+          </h6>
+        </div>
+        
+      </div>
+    
+    </div>
+  </div>
+</div>
+</div>
+
+    </div>
+  </div>
+  <div class="header__nav__dropdown">
+    <a href="/publications/" class="header__nav__dropdown__header no-drop">
+      <h4 class="link inline"><span><u>Publications</u></span></h4>
+    </a>
+  </div>
+  <div class="header__nav__dropdown">
+    <a href="/events/" class="header__nav__dropdown__header no-drop">
+      <h4 class="link inline"><span><u>Events</u></span></h4>
+    </a>
+  </div>
+  <div class="header__nav__dropdown">
+    <a class="header__nav__dropdown__header drop">
+      <h4 class="link inline"><span><u>About</u></span></h4>
+    </a>
+    <div class="header__nav__dropdown__list-wrapper about-dropdown">
+      
+
+
+
+<div class="about-dropdown-wrapper container">
+<div class="row">
+  <div class="col-8">
+    <div class="about-image">
+      <img src="https://d1y8sb8igg2f8e.cloudfront.net/images/AnnualReport_Flag.original.2e16d0ba.fill-200x170.jpg" />
+    </div>
+    <div class="about-text">
+      <h4 class="inline link column-heading">
+        <a href="/our-funding/donate/"><u>Support New America &mdash;</u></a>
+      </h4>
+      <h6 class="margin-top-25 margin-bottom-15">We are dedicated to renewing the promise of America by continuing the quest to realize our nation's highest ideals, honestly confronting the challenges caused by rapid technological and social change, and seizing the opportunities those changes create.</h6>
+    </div>
+  </div>
+  <div class="col-4">
+    <h4 class="inline link column-heading">
+      <a href="/our-story/"><u>About &mdash;</u></a>
+    </h4>
+    <div class="row margin-top-25">
+    
+      <div class="col-xl-5 col-lg-6">
+        
+          <div class="header-dropdown-links__link">
+            <h6 class="link margin-top-0 margin-bottom-15">
+              <a href="/our-story/">
+                Our Story
+              </a>
+            </h6>
+          </div>
+        
+          <div class="header-dropdown-links__link">
+            <h6 class="link margin-top-0 margin-bottom-15">
+              <a href="/our-people/">
+                Our People
+              </a>
+            </h6>
+          </div>
+        
+          <div class="header-dropdown-links__link">
+            <h6 class="link margin-top-0 margin-bottom-15">
+              <a href="/our-funding/">
+                Our Funding
+              </a>
+            </h6>
+          </div>
+        
+      </div>
+    
+      <div class="col-xl-5 col-lg-6">
+        
+          <div class="header-dropdown-links__link">
+            <h6 class="link margin-top-0 margin-bottom-15">
+              <a href="/press-room/">
+                Press Room
+              </a>
+            </h6>
+          </div>
+        
+          <div class="header-dropdown-links__link">
+            <h6 class="link margin-top-0 margin-bottom-15">
+              <a href="/jobs/">
+                Jobs &amp; Fellowships
+              </a>
+            </h6>
+          </div>
+        
+          <div class="header-dropdown-links__link">
+            <h6 class="link margin-top-0 margin-bottom-15">
+              <a href="/new-america-20/">
+                New America Turns 20
+              </a>
+            </h6>
+          </div>
+        
+      </div>
+    
+    </div>
+  </div>
+
+</div>
+</div>
+
+    </div>
+  </div>
+  <div class="header__nav__dropdown">
+    <a href="/our-funding/donate/" class="header__nav__dropdown__header no-drop">
+      <h4 class="link inline"><span><u>Donate</u></span></h4>
+    </a>
+  </div>
+</div>
+
+      </nav>
+    </div>
+  </div>
+  <div id="mobile-menu__wrapper">
+    <a class="mobile-menu-icon" id="mobile-menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</a>
+
+    <div id="na-react__mobile-menu" data-replace-this="true"></div>
+  </div>
+  <div class="header__loading">
+    <div></div>
+  </div>
+  </div>
+
+  
+</header>
+
+    
+    
+	
+  <div class="weekly-header">
+    <div class="container">
+      <h5 class="weekly-header__button button--text with-caret--left white margin-0">
+        
+          
+              <a href="/weekly/"><u>New America Weekly</u></a>
+          
+        
+      </h5>
+    </div>
+  </div>
+
+	
+
+<main class="post container margin-35 margin-lg-80">
+  <div class="row gutter-30">
+     <aside class="post__social col-md-6 col-lg-2 margin-bottom-15">
+       
+        <div class="post-aside-wrapper post__social__wrapper">
+  <div class="margin-bottom-lg-25">
+    <a class="social--inline block" href="https://www.facebook.com/dialog/share?app_id=1650004735115559&display=popup&href=https://newamerica.org/weekly/hello-hello-world/" target="_blank" rel="noopener noreferrer" >
+      <i class="fa circle fa-facebook"></i>
+      <h6>Share</h6>
+    </a>
+  </div>
+  <div class="margin-bottom-lg-25">
+    <a class="social--inline block" href="https://twitter.com/intent/tweet/?url=https://newamerica.org/weekly/hello-hello-world/&text=Hello, “Hello, World”&via=newamerica" target="_blank" rel="noopener noreferrer" >
+      <i class="fa circle fa-twitter"></i>
+      <h6>Tweet</h6>
+    </a>
+  </div>
+  
+</div>
+
+       
+     </aside>
+
+    
+       <div class="col-lg-8 margin-bottom-25">
+         <div class="post-body-wrapper">
+          
+<div class="post-heading__text margin-bottom-35">
+  <h1 class="margin-top-0">
+    Hello, “Hello, World”
+  </h1>
+  
+  
+    <h5>Weekly Article</h5>
+  
+  
+</div>
+
+          
+
+<!-- BLOG -->
+
+
+
+  <div class="post-heading__image margin-bottom-60">
+    <div class="post-heading__image__wrapper">
+      <div src="https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_1375463840.width-30.jpg" class="temp-image"
+        style="padding-bottom:calc(56% - 5px);
+        background-image: url(https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_1375463840.width-30.jpg)"></div>
+      <img src="https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_1375463840.width-800.jpg" class="fade-in-image" onload="this.classList.add('loaded');"/>
+    </div>
+    
+      <h6 class="margin-10">Shutterstock</h6>
+    
+    
+  </div>
+
+
+          <article class="post-body">
+            
+
+
+  <div class="post__byline margin-bottom-15"><span>By&nbsp;</span>
+    <h4 class="inline margin-0 link"><a href="/our-people/clive-thompson/"><u>Clive Thompson</u></a></h4>
+  </div>
+
+
+  <h6 class="post-body__date margin-10">Oct. 17, 2019</h6>
+
+
+
+  
+    <div class="block-paragraph">
+       <div class="rich-text"><p><i>This article</i> <a href="https://slate.com/technology/2019/10/hello-world-history-programming.html"><b><i>originally appeared</i></b></a> <i>in</i> <a href="http://www.slate.com/futuretense"><b><i>Future Tense</i></b></a><i>, a collaboration among</i> <a href="http://www.asu.edu/?feature=research"><b><i>Arizona State University</i></b></a><i>,</i> <a href="http://www.newamerica.org/"><b><i>New America</i></b></a><i>, and</i> <a href="http://slate.com/"><b><i>Slate</i></b></a><i>.</i></p><p>Want to learn some programming? You can go right now to <a href="https://repl.it/languages/python3">this website</a>, where you can run code in the programming language Python. Now type this single line …</p><blockquote class="pullquote">print (&quot;Hello, World!&quot;)</blockquote><p>… and hit the big green “RUN” button near the top of the page.</p><p>Presto: You’ll see the computer execute your bidding and say <i>Hello, World!</i> It’ll even be in white-on-black monospaced text so you’ll feel like a proper hacker.</p><p>Congratulations: You’ve just partaken in one of the oldest traditions in software. Nearly every time a neophyte starts to code—or even when a seasoned programmer decides to learn a new language—the first thing they do is get the computer to say “Hello, World.” Every craft has its lore, and “Hello, World” is a key part of the cultural canon in software. Indeed, I’d argue it illuminates some core aspects of coding culture—the good, the bad, and the ugly.</p><p>Nobody really knows who first ordered a computer to say “Hello, World!” But it began its ascent to nerd fame back in 1972, when the computer scientist Brian Kernighan was writing a manual for the language B. He wanted to demo B’s ability to take little scraps of text and assemble them.</p><p>Kernighan had recently seen “some cartoon of a chick coming out of an egg, and it says <i>Hello, World</i>,” as he told me when I called him up to ask about it. It tickled his fancy, so he used that. Before long, writers of tutorial manuals began surfing in Kernighan’s wake.</p><p>What made “Hello, World” so wildly popular? It’s partly just practical: It’s a quick way to get a peek at what working in a coding language will be like and whether you’d enjoy the syntax. One glance at Python’s “Hello, World” shows you that it’s famously spare and easy on the eyes, while Java’s is a six-line hairball: ouch. (If you really want to geek out, you can <a href="https://excelwithbusiness.com/blog/say-hello-world-in-28-different-programming-languages/">see examples written in 28 different languages here</a>.)</p><p>But the real reason “Hello, World” is so popular is its sheer metaphoric jolt. It taps directly into the thrills of programming, which are deeply Promethean.</p><p>After all, writing and running code often feels like a form of magic. You’re creating a life form, a golem, something that’s walking and talking like it’s alive. When the coders at Facebook created the news feed back in 2006 and published the first experimental post, one joked that “it was like the Frankenstein moment when the finger moves.” Nailed it.</p><p>Writing software seems all the more like sorcery because, well, all you’re doing is uttering <i>words</i>. Get them wrong and nothing happens. Utter them correctly and inert matter—silicon—suddenly obeys your orders. Coding is the art of “<a href="https://twitter.com/erinspice/status/988599432009707521?s=20">telling rocks what to think</a>,” as the programmer Erin Spiceland once quipped.</p><p>Even the most jaded late-career coders I’ve met still routinely marvel at the eldritch nature of their work. “A few hundred years ago in my native New England, an accurate description of my occupation would have gotten me burned at the stake,” <a href="https://books.google.com/books?id=uXLCBAAAQBAJ&amp;lpg=PT8&amp;dq=%22A%20few%20hundred%20years%20ago%20in%20my%20native%20New%20England%22&amp;pg=PT8#v=onepage&amp;q&amp;f=false">as the programmer Danny Hillis once wrote</a>. Hackers, having a sense of humor about this—and, no surprise, being big fans of wordplay—have long leaned into the <a href="https://www.merriam-webster.com/dictionary/thaumaturgy">thaumaturgical</a> spirit. When MIT computer scientists in the ’60s invented helpful routines that ran in the background, they <a href="https://en.wikipedia.org/wiki/Daemon_(computing)">called them “daemons.”</a> Larry Wall, creator of the language Perl, included a command called “bless.” (<a href="https://www.tutorialspoint.com/perl/perl_bless.htm">This example</a> of how to use “bless” is pure poetry: bless $self, $class.)</p><p>As everyone discovers during their first “Hello, World,” coding confers an astonishingly powerful sense of control and mastery. The machine does <i>precisely</i> and <i>obediently</i> what you tell it to. I think this is why so many coders become first besotted when they’re children or teens. In their everyday lives as kids, their authority is minimal; at the keyboard, it is total.</p><blockquote class="pullquote"><b>Coding confers an astonishingly powerful sense of control and</b> <b>mastery.</b></blockquote><p>That has a narcotic appeal. “When you’re a kid, that feeling is wild,” as one coder at Noisebridge, the hackerspace in San Francisco, told me. “It’s like you have a little universe to control, that you create.” That joy, and its accompanying creative jolt, never quite goes away, which is why so many programmers will dive into the zone for hours or days, and hate coming back out. “It must be a dopamine thing,” as <a href="https://github.com/sdras">Sarah Drasner</a>, a well-known full stack developer, once told me. “I will <i>not go to parties</i> so I can code.”</p><p>That sense of mastery has a dangerous side too.</p><p>It can lead to epic hubris. Hey, if you’re <i>that</i> good at commanding computers, shouldn’t you be able to command … anything? Software developers, as the programmer and <a href="https://idlewords.com/talks/sase_panel.htm">Pinboard founder Maciej Cegłowski has observed</a>, often “become convinced that they have a unique ability to understand any kind of system at all, from first principles, without prior training, thanks to their superior powers of analysis. Success in the artificially constructed world of software design promotes a dangerous confidence.”</p><p>One can see that breezy overconfidence all the time in today’s Silicon Valley, where founders insist that their new gewgaw will “revolutionize” our lives. Some of them certainly will, but they usually come with gnarly civic side effects. The Ubers and DoorDashes optimized car-hailing and food ordering, but they atomized work into a frenzy of low-paying gigs. Airbnb helped tourists out, but also incentivized landlords to stop renting to local residents. Facebook’s news feed keeps us apprised of our friends, while also providing an alarmingly efficient vector for malcontents to inject loopy conspiracy theories into the national attention span.</p><p>I don’t mean to rag on programming and programmers. Many of the truly great ones I’ve met are humble and cautious about the limits of their craft. And I do just enough hobbyist coding myself to respect what a sheer joy it is to write software, and how valuable it is when someone creates a truly useful app.</p><p>But it’s clear that the romance of the craft can intoxicate, and that we might want to watch out for that. In recent years, several coders have <a href="https://medium.com/@hinchman_amanda/why-there-should-be-more-liberal-arts-in-computer-science-curriculum-5c512bf059e9">argued persuasively</a> that <a href="https://www.nytimes.com/2016/05/22/opinion/sunday/to-write-software-read-novels.html">computer science students should exposed</a> to more courses <a href="https://www.wired.com/2017/04/hey-computer-scientists-stop-hating-humanities/">in history, art, literature, or anthropology.</a> Those are great ways to begin grasping the messy, grayscale nature of society. You learn that culture and politics and civic life are complex systems that rarely behave the way you expect them to.</p><p>That’s a world also worth saying “hello” to.</p></div>
+    </div>
+  
+
+
+
+
+
+
+
+            
+          </article>
+        </div>
+       </div>
+    
+    <aside class="col-lg-2 ">
+      
+        
+      
+    </aside>
+  </div>
+</main>
+
+
+    
+      <footer class="footer mobile container--full-width">
+	<section class='footer__wrapper container--wide'>
+		<h2 class="centered margin-top-15 margin-bottom-15px">New America</h2>
+		<div class="footer__content">
+      <ul class="footer-mobile__content-list margin-bottom-0">
+        <li><a href="/our-story/"><h6 class="inline">Our Story</h6></a></li>
+        <li><a href="/publications/"><h6 class="inline">Publications</h6></a></li>
+        <li><a href="/programs/"><h6 class="inline">Programs</h6></a></li>
+        <li><a href="/events/"><h6 class="inline">Events</h6></a></li>
+        <li><a href="/our-people/"><h6 class="inline">Our People</h6></a></li>
+        <li><a href="/jobs/"><h6 class="inline">Jobs & Fellowships</h6></a></li>
+        <li><a href="/press/"><h6 class="inline">Press</h6></a></li>
+        <li><a href="/contact-us/"><h6 class="inline">Contact Us</h6></a></li>
+      </ul>
+		</div>
+	</section>
+</footer>
+
+      <footer class="footer desktop container--full-width">
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<h2 class="margin-top-0 margin-bottom-15">New America</h2>
+				<h6 class="margin-top-0 margin-bottom-25">740 15th Street NW, Suite 900<br/>Washington, DC 20005</h6>
+				<div class="footer__social">
+					<a href="https://twitter.com/NewAmerica" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter circle"></i></a>
+					<a href="https://www.facebook.com/NewAmerica" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook circle"></i></a>
+					<a href="https://www.linkedin.com/company/new-america-foundation" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin circle"></i></a>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="row">
+					<div class="col-4">
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/programs"><u>Programs</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/events"><u>Events</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/publications"><u>Publications</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/subscribe"><u>Subscribe</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-0">
+							<a href="/creative-commons"><u>Creative Commons</u></a>
+						</h6>
+					</div>
+					<div class="col-4">
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/our-story"><u>Mission</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/our-people"><u>People</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/our-funding"><u>Funding</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-0">
+							<a href="/policies-and-procedures/"><u>Policies & Procedures</u></a>
+						</h6>
+					</div>
+					<div class="col-4">
+						<h6 class="block link margin-top-0 margin-bottom-25">
+							<a href="/contact"><u>Contact</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/jobs"><u>Jobs & Fellowships</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-25">
+							<a href="/press-room"><u>Press</u></a>
+						</h6>
+						<h6 class="link margin-top-0 margin-bottom-0">
+							<a href="/our-funding/donate"><u>Donate</u></a>
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+    
+    
+
+    <div id="na-react__cookies-notification"></div>
+
+  
+
+  
+    <script type="text/javascript" src="/static/js/vendors~newamericadotorg-a1a21cf5a59b6570c803.js"></script>
+  
+    <script type="text/javascript" src="/static/js/newamericadotorg-a1a21cf5a59b6570c803.js"></script>
+  
+
+  
+	
+
+
+  <!-- Twitter universal website tag code -->
+  <script>
+  !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+  },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+  a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+  // Insert Twitter Pixel ID and Standard Event data below
+  twq('init','o1f8c');
+  twq('track','PageView');
+  </script>
+  <!-- End Twitter universal website tag code -->
+
+</body>
+</html>
