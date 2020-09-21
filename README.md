@@ -90,6 +90,13 @@
     - [Rabin Karp Method](https://github.com/robin025/Python-Programming/blob/master/Algorithms/String%20Matching%20Algorithm/Rabin_Karp.py)
     
    
+# Mini Projects
+- [Clear the clutter](https://github.com/robin025/Python-Programming/tree/master/Mini%20Project/Clear%20The%20Clutter)
+- [Simple Currency Converter](https://github.com/robin025/Python-Programming/tree/master/Mini%20Project/Currency%20Converter)
+- [DRS Review System](https://github.com/robin025/Python-Programming/tree/master/Mini%20Project/DRS%20Review%20System)
+- [Tic Tac Toe](https://github.com/robin025/Python-Programming/tree/master/Mini%20Project/Tic%20Tac%20Toe)
+- [Chrome Dino game Automator](https://github.com/robin025/Python-Programming/tree/master/Mini%20Project/dino%20Game%20Automator)
+- [Water Notification](https://github.com/robin025/Python-Programming/tree/master/Mini%20Project/Waternotification)
 # Python Game Development
    - [Snake Game](https://github.com/robin025/Snake-Game)
    - [Flappy Bird Game](https://github.com/robin025/Flappy-Bird-Game)
