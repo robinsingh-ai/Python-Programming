@@ -11,11 +11,6 @@ Time Complexity  : O(ElogE) or O(ElogV)
 """
 
 
-from dataclasses import dataclass, field
-
-# @dataclass
-
-
 class Edge(object):
     # for storing (Source , destination,weight of the edge)
     def __init__(self, s, d, w):
@@ -29,9 +24,7 @@ class Graph(object):
         self.num_nodes = num_nodes
         self.edgelist = edgelist
         self.parent = []
-
         self.rank = []
-
         # MCST stores edges of the minimum cost spanning tree
         self.mcst = []
 
