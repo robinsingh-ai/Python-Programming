@@ -13,70 +13,70 @@ Time Complexity  : O(ElogE) or O(ElogV)
 
 from dataclasses import dataclass, field
 
-@dataclass
-class Edge :
+# @dataclass
+
+
+class Edge(object):
     # for storing (Source , destination,weight of the edge)
-   s : int
-   d : int
-   w : int
-
-@dataclass
-class Graph :
-
-    num_nodes : int
-    edgelist : list
-    parent : list = field(default_factory = list)
-
-    rank : list = field(default_factory = list)
+    def __init__(self, s, d, w):
+        self.s = s
+        self.d = d
+        self.w = w
 
 
-    #MCST stores edges of the minimum cost spanning tree
-    mcst : list = field(default_factory = list)
+class Graph(object):
+    def __init__(self, num_nodes=None, edgelist=None):
+        self.num_nodes = num_nodes
+        self.edgelist = edgelist
+        self.parent = []
 
-    def _Parent(self, node) :#for finding the parent of the given node
+        self.rank = []
 
-        if self.parent[node] == node :
-           return node
+        # MCST stores edges of the minimum cost spanning tree
+        self.mcst = []
+
+    def _Parent(self, node):  # for finding the parent of the given node
+
+        if self.parent[node] == node:
+            return node
         return self._Parent(self.parent[node])
 
-    def Kruskal_MCST(self) :
+    def Kruskal_MCST(self):
 
-        #Gonna sort all weight objects in the class edge
-        self.edgelist.sort(key=lambda Edge : Edge.w)
+        # Gonna sort all weight objects in the class edge
+        self.edgelist.sort(key=lambda Edge: Edge.w)
 
         self.parent = [None] * self.num_nodes
-        self.rank   = [None] * self.num_nodes
+        self.rank = [None] * self.num_nodes
 
-        for n in range(self.num_nodes) :
-            self.parent[n] = n #every node in the beginning is parent of itself
+        for n in range(self.num_nodes):
+            # every node in the beginning is parent of itself
+            self.parent[n] = n
             self.rank[n] = 0
             # in the beginning rank of every node is 0
 
-        for edge in self.edgelist :
+        for edge in self.edgelist:
             r1 = self._Parent(edge.s)
             r2 = self._Parent(edge.d)
 
             # if parents of source and destinations are not in same subset then add that edge in the MCST
-            if r1 != r2 :
-               self.mcst.append(edge)
-               if self.rank[r1] < self.rank[r2] :
-                  self.parent[r1] = r2
-                  self.rank[r2] += 1
-               else :
-                  self.parent[r2] = r1
-                  self.rank[r1] += 1
+            if r1 != r2:
+                self.mcst.append(edge)
+                if self.rank[r1] < self.rank[r2]:
+                    self.parent[r1] = r2
+                    self.rank[r2] += 1
+                else:
+                    self.parent[r2] = r1
+                    self.rank[r1] += 1
 
         print("MCST")
         print(f"SOURCE  DESTINATION  WEIGHT")
         cost = 0
-        for edge in self.mcst :
+        for edge in self.mcst:
             print(f"{edge.s}    -->  {edge.d}     -->     {edge.w}")
 
             cost += edge.w
-        print("\nMCST(MINIMUM COST) : ",cost)
-
-
-
+        print("\nMCST(MINIMUM COST) : ", cost)
 
 
 if __name__ == '__main__':
@@ -91,16 +91,14 @@ if __name__ == '__main__':
     H = Edge(5, 6, 25)
     I = Edge(1, 2, 28)
 
-       #        1
-       #   10  /
-       #    6         2
+    #        1
+    #   10  /
+    #    6         2
     #    25 /   14   /  \  16
-       # 5       7    3
-       #   \         /
-       #22   \      /  12
-       #       \   /
-       #          4
+    # 5       7    3
+    #   \         /
+    # 22   \      /  12
+    #       \   /
+    #          4
     g1 = Graph(num_nodes, [A, B, C, D, E, F, G, H, I])
     g1.Kruskal_MCST()
-
-
